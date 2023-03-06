@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="text-black">
       <Header/>
-      <section className="relative mx-auto max-w-[80rem]">
+      <section className="relative max-w-[80rem] mx-auto">
         <div className="flex gap-6 lg:gap-[10rem] lg:flex-row flex-col justify-center mt-6 lg:mt-12 ">
           <div className="lg:pt-20 lg:pl-auto pl-4">
             <h2 className="lg:text-4xl text-5xl lg:font-bold font-semibold leading-[4rem]">University of Amsterdam</h2>
