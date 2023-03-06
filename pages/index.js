@@ -3,6 +3,7 @@ import Hero from "@/components/section/hero"
 import Current from "@/components/section/current"
 import Footer from "@/components/interface/footer"
 import News from "@/components/section/news"
+import Goto from "@/components/section/goto"
 
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
       <Hero/>
       <Current/>
       <News/>
-      
+      <Goto/>
       <Footer/>
     </main>
   )
