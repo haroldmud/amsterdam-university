@@ -1,8 +1,10 @@
 import { SlArrowUp } from 'react-icons/sl'
 import { SlArrowDown } from 'react-icons/sl'
 import { SlArrowRight } from 'react-icons/sl'
-import { FaFacebookF, FaTwitter } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp, FaInstagram} from 'react-icons/fa'
+import { ImYoutube } from 'react-icons/im'
 import { useState } from 'react'
+
 
 
 export default function Footer(){
@@ -25,7 +27,7 @@ export default function Footer(){
               <span className='lg:hidden my-auto text-[0.7rem] pr-4'>
                 { isOpen ? <SlArrowUp/> :<SlArrowDown/>}</span>
             </div>
-            <div className={`${isOpen ? "block pb-3" : "hidden"}`}>
+            <div className={`${isOpen ? "block pb-3" : "hidden lg:block"}`}>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Bachelor's programmes</span>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Minors</span>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Master's programmes</span>
@@ -43,7 +45,7 @@ export default function Footer(){
               <span className='lg:hidden my-auto text-[0.7rem] pr-4'>
                 { isOpen1 ? <SlArrowUp/> :<SlArrowDown/>}</span>
             </div>
-            <div className={`${isOpen1 ? "block pb-3" : "hidden"}`}>
+            <div className={`${isOpen1 ? "block pb-3" : "hidden lg:block"}`}>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Bachelor's programmes</span>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Minors</span>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Master's programmes</span>
@@ -61,7 +63,7 @@ export default function Footer(){
               <span className='lg:hidden my-auto text-[0.7rem] pr-4'>
                 { isOpen2 ? <SlArrowUp/> :<SlArrowDown/>}</span>
             </div>
-            <div className={`${isOpen2 ? "block pb-3" : "hidden"}`}>
+            <div className={`${isOpen2 ? "block pb-3" : "hidden lg:block"}`}>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> BWebmail for UvA staff</span>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Minors</span>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Master's programmes</span>
@@ -72,14 +74,14 @@ export default function Footer(){
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Research at UvA</span>
             </div>
           </div>
-          <div className="flex-col flex gap-2 lg:border-none border-b border-gray-400 mr-2">
+          <div className="flex-col flex gap-2 lg:border-none mr-2">
             <h2 className="font-bold pb-3 lg:block hidden lg:my-0 my-auto ">Contact</h2>
             <div onClick={()=> setIsOpen3(current => !current)} className='lg:hidden flex  justify-between lg:border-none border-t  border-gray-400 py-4'>
-              <h2 className="font-bold mb-2 lg:my-0 my-auto">Information for</h2>
+              <h2 className="font-bold mb-2 lg:my-0 my-auto">Contacts</h2>
               <span className='lg:hidden my-auto text-[0.7rem] pr-4'>
                 { isOpen3 ? <SlArrowUp/> :<SlArrowDown/>}</span>
             </div>
-            <div className={`${isOpen3 ? "block pb-3" : "hidden"}`}>
+            <div className={`${isOpen3 ? "block pb-3" : "hidden lg:block"}`}>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Contact information</span>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Locations</span>
               <span className="flex gap-1 text-[0.8rem] font-semibold"><span className="text-[0.5rem] my-auto "><SlArrowRight/></span> Contact Student Services</span>
@@ -98,19 +100,21 @@ export default function Footer(){
             <p>Follow UvA on social media</p>
             <span className="my-auto"><FaFacebookF/></span>
             <span className="my-auto"><FaTwitter/></span>
-            <span className="my-auto"><FaFacebookF/></span>
-            <span className="my-auto"><FaTwitter/></span>
+            <span className="my-auto"><FaLinkedinIn/></span>
+            <span className="my-auto"><FaWhatsapp/></span>
+            <span className="my-auto"><ImYoutube/></span>
+            <span className="my-auto"><FaInstagram/></span>
           </div>  
         </div>
-        <div className="flex flex-col gap-4 lg:hidden mt-12">
+        <div className="flex flex-col gap-4 lg:hidden mt-12 pb-12">
           <p className="text-center">Follow UvA on  social media</p>
-          <div className="flex justify-around">
+          <div className="flex justify-around text-2xl">
             <span className="my-auto"><FaFacebookF/></span>
             <span className="my-auto"><FaTwitter/></span>
-            <span className="my-auto"><FaFacebookF/></span>
-            <span className="my-auto"><FaFacebookF/></span>
-            <span className="my-auto"><FaFacebookF/></span>
-            <span className="my-auto"><FaTwitter/></span>
+            <span className="my-auto"><FaLinkedinIn/></span>
+            <span className="my-auto"><FaWhatsapp/></span> 
+            <span className="my-auto"><ImYoutube/></span>
+             <span className="my-auto"><FaInstagram/></span>
           </div>
           <p className="text-center">Copyright UvA 2023</p>
           <p className="text-center">Bout this site <span className="inline-bolck px-1">Privacy</span> Cookie Settings</p>
