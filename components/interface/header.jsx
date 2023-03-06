@@ -36,11 +36,11 @@ export default function Header(){
           </div>
         </div>
       </section>
-      <section className="bg-grey shadow-md pt-3">
+      <section className="bg-grey shadow-md pt-3 lg:block hidden">
         <div className="max-w-[80rem] mx-auto flex gap-6 text-xl pl-2">
           {
             ['Education', 'Research', 'News & Events', 'About the Uva', 'Library'].map((item,x) => 
-              <a key={x} href="#" className="hover:text-red-800 border-b-2 border-grey hover:border-red-800 pb-3">{item}</a>
+              <a key={x} href="#" className="hover:text-red border-b-2 border-grey hover:border-red pb-3">{item}</a>
             )
           }
         </div>
