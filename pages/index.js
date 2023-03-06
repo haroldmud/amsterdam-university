@@ -40,8 +40,8 @@ export default function Home() {
       <section className="bg-grey shadow-md pt-3">
         <div className="max-w-[80rem] mx-auto flex gap-6 text-xl pl-2">
           {
-            ['Education', 'Research', 'News & Events', 'About the Uva', 'Library'].map((item,idx) => 
-              <a key={idx} href="#" className="hover:text-red-800 border-b-2 border-grey hover:border-red-800 pb-3">{item}</a>
+            ['Education', 'Research', 'News & Events', 'About the Uva', 'Library'].map((item,x) => 
+              <a key={x} href="#" className="hover:text-red-800 border-b-2 border-grey hover:border-red-800 pb-3">{item}</a>
             )
           }
         </div>
