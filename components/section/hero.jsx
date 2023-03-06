@@ -13,21 +13,21 @@ export default function Hero(){
           </div>
         </div>
         <div className="flex lg:flex-row flex-col gap-6 w-full absolute lg:top-[22rem] top-[30rem] lg:pl-[4.5rem] pl-10  ">
-          <div className="cursor-pointer bg-white hover:shadow-lg flex w-[19.5rem] border border-red p-4">
+          <div className="cursor-pointer bg-white shade flex w-[19.5rem] border border-red p-4">
             <div>
               <h2 className="text-red">Bachelor's</h2>
               <p>20+ English taught Bachelor's programmes</p>
             </div>
             <span className="text-red my-auto text-2xl"><IoIosArrowRoundForward/></span>
           </div>
-          <div className="cursor-pointer bg-white hover:shadow-lg flex w-[19.5rem] border border-red p-4">
+          <div className="cursor-pointer bg-white shade flex w-[19.5rem] border border-red p-4">
             <div>
               <h2 className="text-red">Master's</h2>
               <p>20+ English taught Bachelor's programmes</p>
             </div>
             <span className="text-red my-auto text-2xl"><IoIosArrowRoundForward/></span>
           </div>
-          <div className="cursor-pointer bg-white hover:shadow-lg flex w-[19.5rem] border border-red p-4">
+          <div className="cursor-pointer bg-white shade flex w-[19.5rem] border border-red p-4">
             <div>
               <h2 className="text-red">Professional development</h2>
               <p>20+ English taught Bachelor's programmes</p>
