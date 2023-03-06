@@ -6,7 +6,7 @@ export default function Home() {
     <main className="text-black">
       <Header/>
       <Hero/>
-      <section className="max-w-[80rem] mx-auto lg:mt-20 mt-[23rem]">
+      <section className="mx-auto max-w-[80rem]  lg:mt-20 mt-[23rem]">
         <div>
           <h2 className="text-2xl font-semibold pl-2 my-8">Current</h2>
           <div className="flex lg:flex-row flex-col gap-4 justify-between lg:px-2">
