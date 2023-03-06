@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 export default function Header(){
   const links = [{title: 'Education', path:'/education'}, {title:'Research', path:'/research'}, {title:'News & Events', path:'/news'}, {title:'About the UvA', path:'/about'}, {title:'Library', path:'/library'}];
   const [isScroll, setIsScroll] = useState(false);
-  // const [slide, setSlide] = useState(false)
+  const [slide, setSlide] = useState(false)
 
   useEffect(()=>{
     function handleScroll(){
@@ -23,7 +23,19 @@ export default function Header(){
       }
   },[isScroll]);
 
-  
+  useEffect(()=>{
+    function handleSlide(){
+      if(scrollY > 100){
+        setSlide(true)
+      }else{
+        setSlide(false)
+      }
+    }
+    window.addEventListener('scroll', handleSlide);
+    return ()=>{
+      window.addEventListener('scroll', handleSlide)
+    }
+  },[slide])
 
 
 
@@ -32,10 +44,10 @@ export default function Header(){
   const currentRoute = router.pathname;
 
   return(
-    <header>
-      <section id="header" className="bg-white shadow-md">
-        <div className={` lg:py-5 py-1  max-w-[80rem] mx-auto mb-8`}>
-          <div className={`${isScroll ? "py-1" : "py-4"} my-auto flex justify-between px-2 fixed border bg-white w-full z-10  top-0`}>
+    <header className="bg-white fixed w-full top-0 z-10">
+      <section id="header" className="shadow-md bg-white ">
+        <div className={`${isScroll ?  "py-1" : "lg:py-5 py-2"}   max-w-[80rem] mx-auto `}>
+          <div className={` my-auto flex justify-between px-2  w-full top-0`}>
             <Link href="/">
               <img className={`${isScroll ? "hidden" : "lg:block"} w-[24rem]  hidden`} src="/assets/icons/logo.png" alt="logo" />
               <img  className={`${isScroll ? "lg:block":  "lg:hidden"} lg:w-[2.5rem] w-[3.5rem]`} src="/assets/icons/logo-mob.jpg" alt="" />
@@ -65,8 +77,9 @@ export default function Header(){
           </div>
         </div>
       </section>
-      <section className="bg-grey shadow-md pt-3 lg:block hidden">
-        <div className="max-w-[80rem] mx-auto flex gap-6 text-xl pl-2">
+      {/* ${slide ? "bg-red" :"bg-grey"} */}
+      <section className={`bg-grey shadow-md pt-3 lg:block hidden w-full`}>
+        <div className={` max-w-[80rem] mx-auto flex gap-6 text-xl pl-2 `}>
           {
             links.map((item,x) => 
               <Link key={x} href={`${item.path}`} className={`${item.path == currentRoute ? "border-red text-red" :""} hover:text-red border-b-2 border-grey hover:border-red pb-3`}>{item.title}</Link>
