@@ -12,7 +12,7 @@ export default function Home() {
       <Header/>
       <Hero/>
       <Current/>
-      <section className="fixed right-0 top-[18rem]">
+      <section className="md:block hidden fixed right-0 top-[18rem]">
         <img className="w-10" src="/assets/icons/feedback.png" alt="" />
       </section>
       <News/>

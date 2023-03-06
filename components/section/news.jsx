@@ -1,8 +1,8 @@
 export default function News(){
   return(
-    <section className="bg-grey">
-    <section className=" mt-20 py-12 max-w-[80rem] mx-auto overflow-x-scroll scrol">
-      <h2 className="font-semibold pb-8 text-3xl pl-2">News</h2>
+    <section className="bg-grey mt-12">
+      <h2 className="font-semibold pt-6 text-3xl pl-2">News</h2>
+    <section className="py-12 max-w-[80rem] mx-auto overflow-x-scroll scrol">
       <section className=" px-2 flex gap-2 w-[130rem] ">
         <div className="w-[20rem] cursor-pointer shade group bg-white">
           <img className="w-full h-[10rem] object-cover" src="/assets/images/news1.png" alt="" />
