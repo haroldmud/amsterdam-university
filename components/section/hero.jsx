@@ -2,7 +2,7 @@ import { IoIosArrowRoundForward } from "react-icons/io"
 
 export default function Hero(){
   return(
-    <section className="relative max-w-[80rem] mx-auto mt-[13rem]">
+    <section className="relative max-w-[80rem] mx-auto mt-20 lg:mt-[13rem]">
         <div className="flex gap-6 lg:gap-[10rem] lg:flex-row flex-col justify-center mt-6 lg:mt-12 ">
           <div className="lg:pt-20 lg:pl-auto pl-4">
             <h2 className="lg:text-4xl text-5xl lg:font-bold font-semibold leading-[4rem]">University of Amsterdam</h2>

@@ -1,5 +1,6 @@
 import { TfiSearch, TfiHeart } from "react-icons/tfi"
 import { MdOutlineMenu } from "react-icons/md"
+import { TfiClose } from "react-icons/tfi"
 import Link from "next/link"
 import Router, { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -7,7 +8,8 @@ import { useState, useEffect } from "react";
 export default function Header(){
   const links = [{title: 'Education', path:'/education'}, {title:'Research', path:'/research'}, {title:'News & Events', path:'/news'}, {title:'About the UvA', path:'/about'}, {title:'Library', path:'/library'}];
   const [isScroll, setIsScroll] = useState(false);
-  const [slide, setSlide] = useState(false)
+  const [slide, setSlide] = useState(false);
+  const [menu, setMenu] = useState(false)
 
   useEffect(()=>{
     function handleScroll(){
@@ -72,10 +74,18 @@ export default function Header(){
               <div className="h-fit my-auto w-fit p-2 font-bold border border-gray-500 rounded-sm">
                 <p className="text-gray-500">NL</p>
               </div>
-              <span className="text-2xl text-gray-500 bg-black p-2 rounded-sm my-auto"><MdOutlineMenu/></span>
+              <span onClick={()=> setMenu(current => !current)}  className="text-2xl text-gray-500 bg-black p-2 rounded-sm my-auto">
+                {
+                 menu ? <TfiClose/> : <MdOutlineMenu/>
+                  }
+              </span>
             </div>
+            <a href="https://amsterdam-university-clone.netlify.app/" className={`${menu ? 'block' : 'hidden'} w-full lg:hidden absolute top-[4.4rem] z-50`}>
+              <img className="w-[100%] -ml-2 border" src="/assets/icons/menu.png" alt="" />
+            </a>
           </div>
         </div>
+
       </section>
       {/* ${slide ? "bg-red" :"bg-grey"} */}
       <section className={`${slide ? "hidden" : "lg:block"} bg-grey shadow-md pt-3  hidden w-full`}>
