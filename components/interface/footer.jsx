@@ -19,7 +19,7 @@ export default function Footer(){
           <img className="lg:w-3/12 w-10/12" src="/assets/icons/white-logo.png" alt="logo" />
           <a href="#header" className="w-fit h-fit p-3 bg-gray-400 hover:bg-grey hover:text-dark rounded-sm"><SlArrowUp/></a>
         </div>
-        <div className="flex lg:flex-row flex-col  pl-2 lg:gap-32 gap-6 mt-12">
+        <div className="flex lg:flex-row flex-col  pl-2 lg:gap-32 gap-6 mt-12 lg:pb-12 pt-4">
           <div className="flex-col flex gap-2 lg:border-none border-b border-gray-400 mr-2">
             <h2 className="font-bold pb-3 lg:block hidden lg:my-0 my-auto ">Education & research</h2>
             <div onClick={()=> setIsOpen(current => !current)} className='lg:hidden flex  justify-between lg:border-none border-t  border-gray-400 py-4'>
