@@ -4,7 +4,7 @@ import { MdOutlineMenu } from "react-icons/md"
 export default function Header(){
   return(
     <header>
-      <section className="bg-white shadow-md">
+      <section id="header" className="bg-white shadow-md">
         <div className="lg:py-5 py-1  max-w-[80rem] mx-auto">
           <div className="my-auto flex justify-between px-2">
             <div>
