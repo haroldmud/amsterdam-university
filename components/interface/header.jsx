@@ -25,7 +25,7 @@ export default function Header(){
 
   useEffect(()=>{
     function handleSlide(){
-      if(scrollY > 100){
+      if(scrollY > 500){
         setSlide(true)
       }else{
         setSlide(false)
@@ -45,16 +45,16 @@ export default function Header(){
 
   return(
     <header className="bg-white fixed w-full top-0 z-10">
-      <section id="header" className="shadow-md bg-white ">
+      <section id="header" className="shadow-md bg-white z-50">
         <div className={`${isScroll ?  "py-1" : "lg:py-5 py-2"}   max-w-[80rem] mx-auto `}>
           <div className={` my-auto flex justify-between px-2  w-full top-0`}>
-            <Link href="/">
+            <Link  href="/">
               <img className={`${isScroll ? "hidden" : "lg:block"} w-[24rem]  hidden`} src="/assets/icons/logo.png" alt="logo" />
               <img  className={`${isScroll ? "lg:block":  "lg:hidden"} lg:w-[2.5rem] w-[3.5rem]`} src="/assets/icons/logo-mob.jpg" alt="" />
             </Link>
             <div className="lg:flex gap-8  hidden">
               <div className=" w-[22rem] h-[2.5rem] border rounded-sm flex justify-between">
-                <input className="w-full pl-4" type="text" placeholder="Search..."/>
+                <input className="w-full pl-4 outline-none" type="text" placeholder="Search..."/>
                 <div className="border-r my-2"></div>
                 <span className="my-auto px-4 text-2xl"><TfiSearch/></span>
               </div>
@@ -78,7 +78,7 @@ export default function Header(){
         </div>
       </section>
       {/* ${slide ? "bg-red" :"bg-grey"} */}
-      <section className={`bg-grey shadow-md pt-3 lg:block hidden w-full`}>
+      <section className={`${slide ? "hidden" : "lg:block"} bg-grey shadow-md pt-3  hidden w-full`}>
         <div className={` max-w-[80rem] mx-auto flex gap-6 text-xl pl-2 `}>
           {
             links.map((item,x) => 
